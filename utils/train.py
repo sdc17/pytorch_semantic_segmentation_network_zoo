@@ -8,9 +8,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 from tqdm import tqdm
-from model import SegNet
 from utils import get_range_limited_float_type,dice_coeff
-from utils import timewrapper,setup_logger,TrainingDataset,ToLabel,NLLLOSS2d_logSoftmax,CrossEntropyLoss2d
+from utils import timewrapper,setup_logger,TrainingDataset
+from utils import NLLLOSS2d_logSoftmax,CrossEntropyLoss2d
 from torch.optim import SGD,Adam
 from torch.utils.data import DataLoader,random_split
 

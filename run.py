@@ -71,7 +71,9 @@ def get_config():
 
 
 def main(cfg):
-    if cfg['model'] == 'segnet':
+    if cfg['model'] == 'fcn':
+        net = FCN(classes=cfg['class_num'])
+    elif cfg['model'] == 'segnet':
         net = SegNet(classes=cfg['class_num'])
     elif cfg['model'] == 'unet':
         net = UNet(n_channels=3, n_classes=cfg['class_num'], bilinear=True)

@@ -1,3 +1,4 @@
+from model.FCN import FCN
 from model.SegNet import SegNet
 from model.UNet import UNet
 
